@@ -11,6 +11,10 @@ img {
 	max-width: 100%;
 }
 
+.mobile-history-image {
+	display: none;
+}
+
 .academic-page-icon {
 	width: 56px;
 	height: 56px;
@@ -82,7 +86,50 @@ img {
 	}
 
 	.custom-carousel-img {
-		height: clamp(230px, 58vw, 450px);
+		height: clamp(220px, 54vw, 450px);
+	}
+
+	/* Let the carousel lead into the history copy instead of another full image. */
+	.home-page .history-section .row {
+		display: flex;
+	}
+
+	.home-page .history-section .row > .col-lg-6:last-child {
+		order: -1;
+	}
+
+	.home-page .history-section .row > .col-lg-6:first-child {
+		display: none;
+	}
+
+	.home-page .mobile-history-image {
+		position: relative;
+		display: block;
+		max-width: 300px;
+		margin: 28px 0 30px;
+	}
+
+	.home-page .mobile-history-image img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		box-shadow: 0 14px 28px rgba(22, 67, 80, 0.14);
+	}
+
+	.home-page .mobile-history-image .history-year-badge {
+		right: -4px;
+		bottom: 12px;
+	}
+
+	.home-page .history-image-wrap {
+		max-width: 300px;
+		margin-right: auto;
+		margin-left: 0;
+	}
+
+	.home-page .history-image {
+		aspect-ratio: 16 / 9;
 	}
 
 	.history-stats {
