@@ -8,31 +8,192 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-
-    <nav aria-label="breadcrumb" class="bg-secondary py-2">
-        <div class="container">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-                <li class="breadcrumb-item active text-white" aria-current="page">Get Result</li>
-            </ol>
+    
+    <div class="bg-dark text-white py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span class="me-3">&#9993; info@school.com</span>
+                <span>&#9742; +880 123456789</span>
+            </div>
+            <div>
+                <a href="login.html" class="text-white text-decoration-none">Login</a><span id="current-time" class="ms-3 badge bg-primary"></span>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">&#127891; SCHOOL LOGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center text-uppercase">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teacher.html">Teacher</a></li>
+                    <li class="nav-item"><a class="nav-link" href="student.html">Student</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="academic.html">Academic</a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                            <li><a class="dropdown-item" href="academic.html">Academic Programs</a></li>
+                            <li><a class="dropdown-item" href="academic.html#science">Science</a></li>
+                            <li><a class="dropdown-item" href="academic.html#arts">Arts</a></li>
+                            <li><a class="dropdown-item" href="academic.html#commerce">Commerce</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="result.html">Result</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notice.html">Notice</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary rounded-pill px-4" href="login.html">Login</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <section class="container my-5">
-        <form class="row g-3">
-            <div class="col-md-6">
-                <select class="form-select"><option>Select Department</option></select>
-                
+    <header class="result-hero">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="about-breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <span>Results</span>
+            </nav>
+            <p class="about-kicker">Your progress, made visible</p>
+            <h1>Results that tell<br>a bigger story.</h1>
+            <p>Find an individual result or explore how our community performed together last year.</p>
+        </div>
+    </header>
+    <main class="result-page">
+        <section class="result-search-section">
+            <div class="container">
+                <div class="result-heading">
+                    <p class="about-kicker">Find a result</p>
+                    <h2>Choose your search.</h2>
+                    <p>Use either option to access the latest academic record.</p>
+                </div>
+                <div class="result-search-grid">
+                    <form class="result-search-card result-search-department">
+                        <span class="result-search-number">01</span>
+                        <h3>Department wise</h3>
+                        <p>Browse results by academic pathway and examination year.</p>
+                        <label for="department">Select department</label>
+                        <select id="department" class="form-select">
+                            <option selected disabled>Choose a department</option>
+                            <option>Science</option>
+                            <option>Arts</option>
+                            <option>Commerce</option>
+                        </select>
+                        <label for="department-year">Examination year</label>
+                        <select id="department-year" class="form-select">
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                        </select>
+                        <button type="submit" class="result-submit">Search department <span aria-hidden="true">&#8594;</span></button>
+                    </form>
+                    <form class="result-search-card result-search-id">
+                        <span class="result-search-number">02</span>
+                        <h3>Student ID wise</h3>
+                        <p>Look up one student's result with their unique ID.</p>
+                        <label for="student-id">Student ID</label>
+                        <input id="student-id" class="form-control" type="text" placeholder="For example: STU-2024-018" required>
+                        <label for="id-year">Examination year</label>
+                        <select id="id-year" class="form-select">
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                        </select>
+                        <button type="submit" class="result-submit">Search student <span aria-hidden="true">&#8594;</span></button>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Enter Student ID">
+        </section>
+        <section class="last-year-section">
+            <div class="container">
+                <div class="result-heading last-year-heading">
+                    <div>
+                        <p class="about-kicker">A look back</p>
+                        <h2>Last year’s results</h2>
+                    </div>
+                    <span>Academic year 2023–24</span>
+                </div>
+                <div class="last-year-layout">
+                    <div class="last-year-summary">
+                        <strong>94.6<small>%</small></strong>
+                        <span>Overall pass rate</span>
+                        <p>Every department finished the year with steady progress and students moving confidently into their next chapter.</p>
+                        <a href="student.html" class="result-outline-link">Meet our achievers <span aria-hidden="true">&#8594;</span></a>
+                    </div>
+                    <div class="department-results">
+                        <div class="department-result">
+                            <div><strong>Science</strong><span>42 students</span></div>
+                            <div class="result-bar"><span class="result-bar-science"></span></div>
+                            <b>98%</b>
+                        </div>
+                        <div class="department-result">
+                            <div><strong>Commerce</strong><span>36 students</span></div>
+                            <div class="result-bar"><span class="result-bar-commerce"></span></div>
+                            <b>94%</b>
+                        </div>
+                        <div class="department-result">
+                            <div><strong>Arts</strong><span>29 students</span></div>
+                            <div class="result-bar"><span class="result-bar-arts"></span></div>
+                            <b>92%</b>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-success mt-3">Search Result</button>
-        </form>
-    </section>
-
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footer-cta">
+            <div>
+                <p class="footer-kicker">Your next chapter starts here</p>
+                <h2>Come learn with us.</h2>
+            </div>
+            <a class="footer-cta-link" href="about.html">Meet our community <span aria-hidden="true">&#8594;</span></a>
+        </div>
+        <div class="container footer-main">
+            <div class="footer-intro">
+                <a class="footer-brand" href="index.html"><span aria-hidden="true">&#9733;</span> SCHOOL LOGO</a>
+                <p>A welcoming place to think deeply, make boldly, and grow together.</p>
+                <div class="footer-socials" aria-label="Social media links">
+                    <a href="#facebook" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    <a href="#instagram" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    <a href="#youtube" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <a href="about.html">About us</a>
+                <a href="academic.html">Academic programs</a>
+                <a href="teacher.html">Our teachers</a>
+                <a href="notice.html">Notice board</a>
+            </div>
+            <div class="footer-column">
+                <h3>For students</h3>
+                <a href="student.html">Student portal</a>
+                <a href="result.html">Check results</a>
+                <a href="login.html">Log in</a>
+                <a href="notice.html#parent-meeting">Parent community</a>
+            </div>
+            <div class="footer-column footer-contact">
+                <h3>Visit us</h3>
+                <p>123 School Road<br>Dhaka, Bangladesh</p>
+                <a href="tel:+880123456789">+880 123456789</a>
+                <a href="mailto:info@school.com">info@school.com</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>&copy; 2024 School Name. All rights reserved.</span>
+            <span>Built for curious minds.</span>
+        </div>
+    </footer>
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->

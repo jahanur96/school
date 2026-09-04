@@ -1,43 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School Website - Student</title>
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <nav aria-label="breadcrumb" class="bg-secondary py-2">
-        <div class="container">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-                <li class="breadcrumb-item active text-white" aria-current="page">Student Info</li>
-            </ol>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="bg-dark text-white py-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>
+          <span class="me-3">&#9993; info@school.com</span
+          ><span>&#9742; +880 123456789</span>
         </div>
+        <div>
+          <a href="login.html" class="text-white text-decoration-none">Login</a
+          ><span id="current-time" class="ms-3 badge bg-primary"></span>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm"
+    >
+      <div class="container-fluid px-4">
+        <a class="navbar-brand fw-bold text-primary" href="index.html"
+          >&#127891; SCHOOL LOGO</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center text-uppercase">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="teacher.html">Teacher</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="student.html"
+                >Student</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="academic.html"
+                >Academic</a
+              >
+              <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                <li>
+                  <a class="dropdown-item" href="academic.html"
+                    >Academic Programs</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academic.html#science"
+                    >Science</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academic.html#arts">Arts</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academic.html#commerce"
+                    >Commerce</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="result.html">Result</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="notice.html">Notice</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary rounded-pill px-4" href="login.html"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <section class="container my-5" style="max-width: 400px;">
-        <h2 class="text-center">Login</h2>
-        <form id="loginForm">
-            <div class="mb-3">
-                <label class="form-label">Username</label>
-                <input type="text" class="form-control" required>
+    <header class="student-hero">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="about-breadcrumb">
+          <a href="index.html">Home</a><span aria-hidden="true">/</span
+          ><span>Students</span>
+        </nav>
+        <p class="about-kicker">A community of achievers</p>
+        <h1>Progress looks<br />good on everyone.</h1>
+        <p>
+          Celebrate the people, milestones, and moments that make our student
+          community special.
+        </p>
+      </div>
+    </header>
+
+    <main class="student-page">
+      <section class="best-result-section">
+        <div class="container">
+          <div class="student-section-heading">
+            <div>
+              <p class="about-kicker">Academic highlights</p>
+              <h2>Best result students</h2>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control" required>
+            <a href="result.html" class="student-outline-link"
+              >View all results <span aria-hidden="true">&#8594;</span></a
+            >
+          </div>
+          <div class="result-list">
+            <article class="result-student result-student-top">
+              <span class="result-rank">01</span>
+              <div class="result-avatar">NS</div>
+              <div class="result-name">
+                <h3>Nusrat Jahan</h3>
+                <p>Science · Class XII</p>
+              </div>
+              <strong>98.4<small>%</small></strong
+              ><span class="result-label">Highest score</span>
+            </article>
+            <article class="result-student">
+              <span class="result-rank">02</span>
+              <div class="result-avatar result-avatar-warm">AR</div>
+              <div class="result-name">
+                <h3>Arif Rahman</h3>
+                <p>Commerce · Class XII</p>
+              </div>
+              <strong>97.8<small>%</small></strong
+              ><span class="result-label">Outstanding</span>
+            </article>
+            <article class="result-student">
+              <span class="result-rank">03</span>
+              <div class="result-avatar result-avatar-green">SI</div>
+              <div class="result-name">
+                <h3>Samia Islam</h3>
+                <p>Arts · Class XII</p>
+              </div>
+              <strong>96.9<small>%</small></strong
+              ><span class="result-label">Outstanding</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="student-list-section">
+        <div class="container">
+          <div class="student-section-heading">
+            <div>
+              <p class="about-kicker">Our student body</p>
+              <h2>Student list</h2>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
-        </form>
-    </section>
+            <span>Learning together, growing together.</span>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <article class="card student-card h-100">
+                <img
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  class="card-img-top"
+                  alt="Nusrat Jahan"
+                />
+                <div class="card-body">
+                  <span class="student-card-tag">Science · XII</span>
+                  <h3 class="card-title">Nusrat Jahan</h3>
+                  <p class="card-text">
+                    Science club captain and aspiring biomedical researcher.
+                  </p>
+                  <a href="result.html" class="student-card-link"
+                    >See academic record
+                    <span aria-hidden="true">&#8594;</span></a
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card student-card h-100">
+                <img
+                  src="https://randomuser.me/api/portraits/men/46.jpg"
+                  class="card-img-top"
+                  alt="Arif Rahman"
+                />
+                <div class="card-body">
+                  <span class="student-card-tag">Commerce · XII</span>
+                  <h3 class="card-title">Arif Rahman</h3>
+                  <p class="card-text">
+                    Young entrepreneur with a passion for business and debate.
+                  </p>
+                  <a href="result.html" class="student-card-link"
+                    >See academic record
+                    <span aria-hidden="true">&#8594;</span></a
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card student-card h-100">
+                <img
+                  src="https://randomuser.me/api/portraits/women/22.jpg"
+                  class="card-img-top"
+                  alt="Samia Islam"
+                />
+                <div class="card-body">
+                  <span class="student-card-tag">Arts · XII</span>
+                  <h3 class="card-title">Samia Islam</h3>
+                  <p class="card-text">
+                    Writer, visual artist, and editor of the school journal.
+                  </p>
+                  <a href="result.html" class="student-card-link"
+                    >See academic record
+                    <span aria-hidden="true">&#8594;</span></a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback-section">
+        <div class="container">
+          <div class="student-section-heading">
+            <div>
+              <p class="about-kicker">In their own words</p>
+              <h2>Student feedback</h2>
+            </div>
+          </div>
+          <div
+            id="studentFeedback"
+            class="carousel slide feedback-carousel"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#studentFeedback"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Feedback 1"
+              ></button
+              ><button
+                type="button"
+                data-bs-target="#studentFeedback"
+                data-bs-slide-to="1"
+                aria-label="Feedback 2"
+              ></button
+              ><button
+                type="button"
+                data-bs-target="#studentFeedback"
+                data-bs-slide-to="2"
+                aria-label="Feedback 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="feedback-slide">
+                  <div class="feedback-mark">“</div>
+                  <blockquote>
+                    My teachers made difficult ideas feel possible. I learned
+                    how to keep asking questions, even when the answer did not
+                    come quickly.
+                  </blockquote>
+                  <div class="feedback-person">
+                    <div class="result-avatar">NS</div>
+                    <div>
+                      <strong>Nusrat Jahan</strong
+                      ><span>Class XII · Science</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="feedback-slide">
+                  <div class="feedback-mark">“</div>
+                  <blockquote>
+                    The best part of school is having the freedom to try. Every
+                    project helped me understand what I am capable of.
+                  </blockquote>
+                  <div class="feedback-person">
+                    <div class="result-avatar result-avatar-warm">AR</div>
+                    <div>
+                      <strong>Arif Rahman</strong
+                      ><span>Class XII · Commerce</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="feedback-slide">
+                  <div class="feedback-mark">“</div>
+                  <blockquote>
+                    Our community celebrates more than grades. It celebrates
+                    kindness, creativity, and the courage to start again.
+                  </blockquote>
+                  <div class="feedback-person">
+                    <div class="result-avatar result-avatar-green">SI</div>
+                    <div>
+                      <strong>Samia Islam</strong><span>Class XII · Arts</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#studentFeedback"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span
+              ><span class="visually-hidden">Previous</span></button
+            ><button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#studentFeedback"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span
+              ><span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-cta">
+        <div>
+          <p class="footer-kicker">Your next chapter starts here</p>
+          <h2>Come learn with us.</h2>
+        </div>
+        <a class="footer-cta-link" href="about.html"
+          >Meet our community <span aria-hidden="true">&#8594;</span></a
+        >
+      </div>
+      <div class="container footer-main">
+        <div class="footer-intro">
+          <a class="footer-brand" href="index.html"
+            ><span aria-hidden="true">&#9733;</span> SCHOOL LOGO</a
+          >
+          <p>
+            A welcoming place to think deeply, make boldly, and grow together.
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#facebook" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#instagram" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#youtube" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="about.html">About us</a
+          ><a href="academic.html">Academic programs</a
+          ><a href="teacher.html">Our teachers</a
+          ><a href="notice.html">Notice board</a>
+        </div>
+        <div class="footer-column">
+          <h3>For students</h3>
+          <a href="student.html">Student portal</a
+          ><a href="result.html">Check results</a><a href="login.html">Log in</a
+          ><a href="notice.html#parent-meeting">Parent community</a>
+        </div>
+        <div class="footer-column footer-contact">
+          <h3>Visit us</h3>
+          <p>123 School Road<br />Dhaka, Bangladesh</p>
+          <a href="tel:+880123456789">+880 123456789</a
+          ><a href="mailto:info@school.com">info@school.com</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; 2024 School Name. All rights reserved.</span
+        ><span>Built for curious minds.</span>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
